@@ -1,7 +1,18 @@
 Welcome to Calculus 2
 ============================
 
-This is a small book to give you a feel for how book content is
-structured.
+These are the course lecture notes for the Spring 2021 semester. These will be organized by learning outcomes:
 
-Check out the content pages bundled with this sample book to get started.
+ - Intermediate Integration Techniques
+ - Advanced Integration Techniques
+ - Introduction to Series
+ - Series Testing
+ - Power Series
+ - Parametric Equations
+ - Polar Coordinates
+
+
+Please use our [class website](https://forum.bluetangent.org) to ask any questions (or if you notice any typos!)
+
+Happy Calculus-ing!
+~ Prof. Casper

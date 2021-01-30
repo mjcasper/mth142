@@ -2,7 +2,13 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 - file: intro
-- file: content
+#- file: calc1
+#  sections:
+#    - file: derivatives
+#    - file: basic-integration
+- file: intermediate
   sections:
-    - file: markdown
-    - file: notebooks
+    - file: sub-indefinite
+#    - file: sub-definite
+#    - file: parts-indefinite
+#    - file: parts-definite

@@ -26,3 +26,6 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  use_edit_page_button: false
+  home_page_in_navbar: true
+  favicon: favicon.png
