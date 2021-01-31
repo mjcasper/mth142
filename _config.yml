@@ -29,3 +29,6 @@ html:
   use_edit_page_button: false
   home_page_in_navbar: true
   favicon: favicon.png
+
+parse:
+  myst_extended_syntax: true # More latex environments
