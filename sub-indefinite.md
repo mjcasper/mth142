@@ -8,7 +8,7 @@ $$
 $$ 
 
 $$
-\displaystyle \int \big( f(x)+g(x)\big)dx =\int f(x) dx + \int g(x) dx
+\displaystyle \int \big( f(x)+g(x)\big)\; dx =\int f(x) \; dx + \int g(x) \; dx
 $$
 
 
@@ -160,7 +160,58 @@ $$
 **Answer:** Letting $u=x^2$ should work.
 ```
 
----
+````{tabbed} Solution
+Click through the steps to see what we do.
+
+If you want, give it a try first! 
+````
+
+````{tabbed} Step 1a
+It sometimes is helpful to rewrite the integral by putting the complicated term first, and then any less-complicated terms next to the $dx$ (but still within the integral).
+```{math}
+\int 2x e^{x^2}\;dx=\int  e^{x^2}\cdot 2x\;dx
+```
+This step is not really necessary, but it can be helpful - especially if you are unsure of how to pick $u$.
+
+````
+
+````{tabbed} Step 1b
+Since the more complicated piece of our function is $e^{x^2}$, we choose $u$ to be the inner function: 
+```{math}
+ u=x^2
+```
+We also calculate $du$ to get:
+```{math}
+ du = \left[x^2\right]' \cdot dx  \longrightarrow du= 2x \, dx
+```
+
+````
+
+
+
+````{tabbed} Step 2
+Next, we plug-in our choice for $u$ and what we calculated for $du$ to get: 
+```{math}
+\int  e^{x^2}\cdot 2x\;dx = \int e^u \;du
+```
+````
+
+````{tabbed} Step 3
+The resulting integral can now be solved since it is one of our basic forms. 
+```{math}
+\int e^u \;du = e^u +C
+```
+````
+
+````{tabbed} Step 4
+Once we are done finding the antiderivative in terms of $u$, the very last step is to convert back to $x$: 
+```{math}
+e^u +C = e^{x^2} +C 
+```
+(Don't forget $+C$ for indefinite integrals!)
+````
+
+
 
 ## Example 3
 Evaluate the following integral:
@@ -173,3 +224,53 @@ $$
 **Answer:** Letting $u=x^3+1$ should work.
 ```
 
+````{tabbed} Solution
+Click through the steps to see what we do.
+
+If you want, give it a try first! 
+````
+
+````{tabbed} Step 1a
+Let's split up our function again and rewrite it with the complicated piece first:
+```{math}
+\int \dfrac{3x^2}{x^3+1}\;dx = \int \dfrac{1}{x^3+1}\cdot 3x^2\;dx
+```
+Again, this step is not really necessary, but it can be helpful for picking $u$.
+
+````
+
+````{tabbed} Step 1b
+Since the more complicated piece of our function is $\dfrac{1}{x^3+1}$, we choose $u$ to be the inner function: 
+```{math}
+ u=x^3+1
+```
+We also calculate $du$ to get:
+```{math}
+ du = \left[x^3+1\right]' \cdot dx  \longrightarrow du= 3x^2 \, dx
+```
+
+````
+
+
+
+````{tabbed} Step 2
+Next, we plug-in our choice for $u$ and what we calculated for $du$ to get: 
+```{math}
+\int \dfrac{1}{x^3+1}\cdot 3x^2\;dx = \int \dfrac{1}{u}\;du
+```
+````
+
+````{tabbed} Step 3
+The resulting integral can now be solved since it is one of our basic forms. 
+```{math}
+\int \dfrac{1}{u}\;du = \ln\vert u\vert + C
+```
+````
+
+````{tabbed} Step 4
+Once we are done finding the antiderivative in terms of $u$, the very last step is to convert back to $x$: 
+```{math}
+\ln\vert u\vert + C = \ln\lvert x^3+1\rvert + C
+```
+(Don't forget the absolute value signs!)
+````
