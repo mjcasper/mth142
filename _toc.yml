@@ -9,6 +9,6 @@
 - file: intermediate
   sections:
     - file: sub-indefinite
-#    - file: sub-definite
+    - file: sub-definite
 #    - file: parts-indefinite
 #    - file: parts-definite
