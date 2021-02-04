@@ -10,5 +10,5 @@
   sections:
     - file: sub-indefinite
     - file: sub-definite
-#    - file: parts-indefinite
+    - file: parts-indefinite
 #    - file: parts-definite
