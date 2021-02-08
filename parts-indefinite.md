@@ -82,18 +82,18 @@ Next, we calculate $du$ and $v$ by differentiating and integrating respectively:
 :card: border-2
 Differentiate
 ^^^
-\begin{align*}
+```{math}
 u &=x \\
 du &= 1\cdot dx
-\end{align*}
+```
 
 ---
 Integrate
 ^^^
-\begin{align*}
+```{math}
 dv &=e^x \; dx \\
 v &=e^x
-\end{align*}
+```
 
 ````
 `````
@@ -103,15 +103,7 @@ Now we take the pieces we just calculated and plug them into the integration by 
 
 ````{panels}
 :column: col-sm
-:card: border-2
-Our pieces
-^^^
-\begin{align*}
-u &=x & dv &=e^x \; dx \\
-du &=  dx & v &=e^x
-\end{align*}
-
----
+:card: border-1
 The Formula
 ^^^
 ```{math}
@@ -119,6 +111,28 @@ The Formula
 ```
 
 ````
+
+**Our Pieces** 
+
+````{panels}
+```{math}
+u &=x \\
+du &= 1\cdot dx
+```
+
+---
+
+```{math}
+dv &=e^x \; dx \\
+v &=e^x
+```
+````
+
+
+
+
+
+
 Doing this we get:
 ```{math}
 \int x \cdot e^x\; dx = x\cdot e^x -\int e^x \; dx
@@ -129,10 +143,10 @@ Doing this we get:
 
 ````{tabbed} Step 4
 And finally we finish calculating any remaining integrals:
-\begin{align*}
+```{math}
 \int x \cdot e^x\; dx & = x\cdot e^x -\int e^x \; dx \\
  & = x\cdot e^x - e^x +C
-\end{align*}
+```
 (Don't forget $+C$ for indefinite integrals!)
 ````
 
@@ -247,18 +261,18 @@ Next, we calculate $du$ and $v$ by differentiating and integrating respectively:
 :card: border-2
 Differentiate
 ^^^
-\begin{align*}
+```{math}
 u &=2x+5 \\
 du &= 2\cdot dx
-\end{align*}
+```
 
 ---
 Integrate
 ^^^
-\begin{align*}
+```{math}
 dv &=\sin(3x) \; dx \\
 v &=-\tfrac{1}{3}\cos(3x)
-\end{align*}
+```
 
 ````
 `````
@@ -277,34 +291,38 @@ The Formula
 
 ````
 
+**Our Pieces**
 ````{panels}
-:column: col-sm
-:card: border-1
-Our pieces
-^^^
-\begin{align*}
-u &=2x+5 & dv &=\sin(3x) \; dx \\
-du &=  2\cdot dx & v &=-\tfrac{1}{3}\cos(3x)
-\end{align*}
 
+```{math}
+u &=2x+5 \\
+du &= 2\cdot dx
+```
+
+---
+
+```{math}
+dv &=\sin(3x) \; dx \\
+v &=-\tfrac{1}{3}\cos(3x)
+```
 ````
 
 
 Doing this we get:
-\begin{align*}
+```{math}
 \int (2x+5) \cdot \sin(3x) & \, dx = uv -\int v \; du \\
 & = (2x+5)\cdot \left(-\tfrac{1}{3}\cos(3x) \right) -\int \left(-\tfrac{1}{3}\cos(3x) \right) \cdot 2 \; dx
-\end{align*}
+```
 
 
 `````
 
 ````{tabbed} Step 4
 And finally we finish calculating any remaining integrals:
-\begin{align*}
+```{math}
 &= -\tfrac{1}{3}(2x+5)\cdot \cos(3x)  + \tfrac{2}{3}\int \cos(3x)  \; dx \\
 & = -\tfrac{1}{3}(2x+5)\cdot \cos(3x) + \tfrac{2}{3}\left( \tfrac{1}{3}\sin(3x)\right)+C
-\end{align*}
+```
 (Don't forget $+C$ for indefinite integrals!)
 ````
 
@@ -385,18 +403,18 @@ Next, we calculate $du$ and $v$ by differentiating and integrating respectively:
 :card: border-2
 Differentiate
 ^^^
-\begin{align*}
+```{math}
 u &=\ln(2x) \\
 du &= \dfrac{1}{2x}\cdot \big[2x\big]'\cdot dx
-\end{align*}
+```
 
 ---
 Integrate
 ^^^
-\begin{align*}
+```{math}
 dv &=x^2 \; dx \\
 v &=\tfrac{1}{3}x^3
-\end{align*}
+```
 
 ````
 `````
@@ -414,37 +432,42 @@ The Formula
 ```
 
 ````
+**Our Pieces**
 
 ````{panels}
-:column: col-sm
-:card: border-2
-Our pieces
-^^^
-\begin{align*}
-u &=\ln(2x) & dv &=x^2 \; dx \\
-du &=  \dfrac{1}{x}\cdot dx & v &=\tfrac{1}{3}x^3
-\end{align*}
+
+```{math}
+u &=\ln(2x) \\
+du &= \dfrac{1}{x}\cdot dx
+```
+
+---
+
+```{math}
+dv &=x^2 \; dx \\
+v &=\tfrac{1}{3}x^3
+```
 
 ````
 
 
 Doing this we get:
-\begin{align*}
+```{math}
 
 \int x^2 \cdot \ln(2x) \,& dx = uv -\int v \; du \\
 &= \ln(2x)\cdot \left(\tfrac{1}{3}x^3 \right) -\int \left(\tfrac{1}{3}x^3 \right) \cdot \dfrac{1}{x} \; dx
-\end{align*}
+```
 
 
 `````
 
 ````{tabbed} Step 4
 And finally we finish calculating any remaining integrals. Notice that we need to multiply the $x^3$ and $1/x$ together, before we can actually do that integral.
-\begin{align*}
+```{math}
 &= \ln(2x)\cdot \left(\tfrac{1}{3}x^3 \right) -\int \left(\tfrac{1}{3}x^3 \right) \cdot \dfrac{1}{x} \; dx \\
 &= \tfrac{1}{3}x^3\cdot \ln(2x) -\int \tfrac{1}{3}x^2 \; dx\\
 &= \tfrac{1}{3}x^3\cdot \ln(2x) - \tfrac{1}{9}x^3 +C
-\end{align*}
+```
 (Don't forget $+C$ for indefinite integrals!)
 
 ````
@@ -540,18 +563,18 @@ Next, we calculate $du$ and $v$ by differentiating and integrating respectively:
 :card: border-2
 Differentiate
 ^^^
-\begin{align*}
+```{math}
 u &=\ln x \\
 du &= \dfrac{1}{x}\cdot dx
-\end{align*}
+```
 
 ---
 Integrate
 ^^^
-\begin{align*}
+```{math}
 dv &=1 \cdot dx \\
 v &=x
-\end{align*}
+```
 
 ````
 `````
@@ -570,36 +593,42 @@ The Formula
 
 ````
 
+**Our Pieces**
+
 ````{panels}
-:column: col-sm
-:card: border-2
-Our pieces
-^^^
-\begin{align*}
-u &=\ln x & dv &=1 \cdot dx \\
-du &=  \dfrac{1}{x}\cdot dx & v &=x
-\end{align*}
+
+```{math}
+u &=\ln x \\
+du &= \dfrac{1}{x}\cdot dx
+```
+
+---
+
+```{math}
+dv &=1 \cdot dx \\
+v &=x
+```
 
 ````
 
 
 Doing this we get:
-\begin{align*}
+```{math}
 
 \int \ln x \,& dx = uv -\int v \; du \\
 &= \left(\ln x\right)\cdot x -\int x\cdot  \dfrac{1}{x} \; dx
-\end{align*}
+```
 
 
 `````
 
 ````{tabbed} Step 4
 And finally we finish calculating any remaining integrals. Notice that we need to multiply the $x$ and $1/x$ together, before we can actually do that remaining integral.
-\begin{align*}
+```{math}
 &= \left(\ln x\right)\cdot x -\int x\cdot  \dfrac{1}{x} \; dx\\
 &= x\ln x -\int 1 \; dx\\
 &= x\ln x -x +C
-\end{align*}
+```
 (Don't forget $+C$ for indefinite integrals!)
 
 ````
@@ -673,18 +702,18 @@ Next, we calculate $du$ and $v$ by differentiating and integrating respectively:
 :card: border-2
 Differentiate
 ^^^
-\begin{align*}
+```{math}
 u &=x^2 \\
 du &= 2x\cdot dx
-\end{align*}
+```
 
 ---
 Integrate
 ^^^
-\begin{align*}
+```{math}
 dv &= e^{-2x} \; dx \\
 v &=-\tfrac{1}{2}e^{-2x}
-\end{align*}
+```
 
 ````
 `````
@@ -703,34 +732,38 @@ The Formula
 
 ````
 
+**Our Pieces**
 ````{panels}
-:column: col-sm
-:card: border-1
-Our pieces
-^^^
-\begin{align*}
-u &=x^2 & dv &= e^{-2x} \; dx \\
-du &=  2x\cdot dx & v &=-\tfrac{1}{2}e^{-2x}
-\end{align*}
+
+```{math}
+u &=x^2 \\
+du &= 2x\cdot dx
+```
+
+---
+```{math}
+dv &= e^{-2x} \; dx \\
+v &=-\tfrac{1}{2}e^{-2x}
+```
 
 ````
 
 
 Doing this we get:
-\begin{align*}
+```{math}
 \int x^2 \cdot e^{-2x} & \, dx = uv -\int v \; du \\
 & = x^2\cdot \left(-\tfrac{1}{2}e^{-2x}\right) -\int \left(-\tfrac{1}{2}e^{-2x} \right) \cdot 2x \; dx
-\end{align*}
+```
 
 
 `````
 
 ````{tabbed} Step 4
 And finally we finish calculating any remaining integrals:
-\begin{align*}
+```{math}
 & = x^2\cdot \left(-\tfrac{1}{2}e^{-2x}\right) -\int \left(-\tfrac{1}{2}e^{-2x} \right) \cdot 2x \; dx \\
 &= -\tfrac{1}{2}x^2e^{-2x}  + \int x \cdot e^{-2x}  \; dx
-\end{align*}
+```
 But at this point we might realize the resulting integral is still a product of an algebraic part and an exponential part ... so we need to use integration by parts again!
 
 ````
@@ -798,18 +831,18 @@ Next, we calculate $du$ and $v$ by differentiating and integrating respectively:
 :card: border-2
 Differentiate
 ^^^
-\begin{align*}
+```{math}
 u &=x \\
 du &=  dx
-\end{align*}
+```
 
 ---
 Integrate
 ^^^
-\begin{align*}
+```{math}
 dv &= e^{-2x} \; dx \\
 v &=-\tfrac{1}{2}e^{-2x}
-\end{align*}
+```
 
 ````
 `````
@@ -827,36 +860,40 @@ The Formula
 ```
 
 ````
+**Our Pieces**
 
 ````{panels}
-:column: col-sm
-:card: border-1
-Our pieces
-^^^
-\begin{align*}
-u &=x & dv &= e^{-2x} \; dx \\
-du &=  dx & v &=-\tfrac{1}{2}e^{-2x}
-\end{align*}
+
+```{math}
+u &=x \\
+du &=  dx
+```
+
+---
+
+```{math}
+dv &= e^{-2x} \; dx \\
+v &=-\tfrac{1}{2}e^{-2x}
+```
 
 ````
 
-
 Doing this we get:
-\begin{align*}
+```{math}
 \int x \cdot e^{-2x} & \, dx = uv -\int v \; du \\
 & = x\cdot \left(-\tfrac{1}{2}e^{-2x}\right) -\int \left(-\tfrac{1}{2}e^{-2x} \right) \; dx
-\end{align*}
+```
 
 
 `````
 
 ````{tabbed} Step 4
 And finally we finish calculating any remaining integrals:
-\begin{align*}
+```{math}
 & = x\cdot \left(-\tfrac{1}{2}e^{-2x}\right) -\int \left(-\tfrac{1}{2}e^{-2x} \right) \; dx\\
 &= -\tfrac{1}{2}xe^{-2x}  + \tfrac{1}{2} \int  e^{-2x}  \; dx \\
 &= -\tfrac{1}{2}xe^{-2x}  + \tfrac{1}{2} \left(\tfrac{-1}{2} e^{-2x}\right) +C
-\end{align*}
+```
 But we're not done yet ...
 
 ````
@@ -924,15 +961,22 @@ If you want, give it a try first! (Use the steps listed above as a guide to get 
 `````{tabbed} First Time
 Using our LIATE strategy, we choose $u$ to be the trigonometric part of our function and $dv$ to be the exponential part. Then to get all of our ingredients, we calculate $du$ and $v$ by differentiating and integrating respectively.
 
+
+
+**Our Pieces**
+
 ````{panels}
-:column: col-sm
-:card: border-1
-Our pieces
-^^^
-\begin{align*}
-u &=\sin(5x) & dv &= e^x \; dx \\
-du &=  5\cos(5x)\cdot dx & v &=e^x
-\end{align*}
+```{math}
+u &=\sin(5x) \\
+du &=  5\cos(5x)\cdot dx 
+```
+
+---
+
+```{math}
+dv &= e^x \; dx \\
+v &=e^x
+```
 
 ````
 
@@ -952,15 +996,22 @@ We now need to integrate:
 \int  e^x\cdot 5 \cos(5x) \, dx
 ```
 Using our LIATE strategy again we choose $u$ to be the trigonometric part and $dv$ to be the exponential part. **Be consistent!** Then calculate $du$ and $v$ just like before.
+ 
+
+**Our Pieces**
+
 ````{panels}
-:column: col-sm
-:card: border-1
-Our pieces
-^^^
-\begin{align*}
-u &=5\cos(5x) & dv &= e^x \; dx \\
-du &=  -25\sin(5x)\cdot dx & v &=e^x
-\end{align*}
+```{math}
+u &=5\cos(5x)  \\
+du &=  -25\sin(5x)\cdot dx 
+```
+
+---
+
+```{math}
+dv &= e^x \; dx \\
+v &=e^x
+```
 
 ````
 
