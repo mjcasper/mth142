@@ -11,4 +11,5 @@
     - file: sub-indefinite
     - file: sub-definite
     - file: parts-indefinite
-#    - file: parts-definite
+    - file: parts-definite
+    - file: trig-sine-cosine
