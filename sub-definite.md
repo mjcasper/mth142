@@ -1,4 +1,4 @@
-# Substitution Rule for Definite Integrals
+# (I-2) Substitution Rule for Definite Integrals
 
 ## Two Methods
 Essentially there are two methods when calculating definite integrals using substitution rule, and they both center around how we handle the limits of integration:

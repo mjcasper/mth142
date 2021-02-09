@@ -1,4 +1,4 @@
-# Trigonometric Integrals Involving Powers of Sine and Cosine
+# (I-5) Trigonometric Integrals Involving Powers of Sine and Cosine
 
 In this lesson we are going to see how to calculate integrals of the form:
 

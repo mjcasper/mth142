@@ -1,4 +1,4 @@
-# Substitution Rule for Indefinite Integrals
+# (I-1) Substitution Rule for Indefinite Integrals
 
 ## Derivative and Integration Rules
 Essentially each derivative rule that we have seen, has a complementary integration counterpart. For example, we have the differentiation and integration rules for **addition:** 
