@@ -215,3 +215,343 @@ And finally we can find the antiderivative:
 (Don't forget $+C$ for indefinite integrals!)
 ````
 ``````
+
+
+## Even Powers
+
+If **both** of the $\sin x$ and $\cos x$ terms have an **even power** then we:
+
+1. Break up our function into multiples of $\sin^2 x$ and $\cos^2 x$
+2. Apply the half-angle identities.
+3. Multiply all of the terms out.
+4. Repeat the half-angle identities as needed. 
+
+
+````{admonition} Half-Angle Identities
+```{math}
+\sin^2 \theta &=\tfrac{1}{2}(1-\cos 2\theta)\\
+\cos^2 \theta &=\tfrac{1}{2}(1+\cos 2\theta)
+```
+````
+
+It may also be helpful to occasionally use:
+
+````{admonition} Yet Another Trig Identity
+```{math}
+\sin x \cos x =\tfrac{1}{2}\sin 2x
+```
+````
+
+## K-form Integrals
+
+We've mentioned these before, but it will be helpful to recall our K-form Integrals:
+
+````{admonition} K-form Integrals
+
+```{math}
+&\int \sin(kx)\, dx = -\tfrac{1}{k}\cos(kx)+C\\
+&\int \cos(kx)\, dx = \tfrac{1}{k}\sin(kx)+C
+```
+````
+
+
+## Example 4
+Integrate the following:
+
+$$
+\int_0^{\pi/2} \sin^2 x \, dx
+$$
+
+``````{dropdown} Solution (Click to see the steps.)
+
+`````{tabbed} Step 1
+**Half-Angle:** Our function is already written as a multiple of $\sin^2 x$, so we can start by applying our half-angle identity.
+```{math}
+\int_0^{\pi/2} \sin^2 x \, dx= \int_0^{\pi/2} \left(\tfrac{1}{2}-\tfrac{1}{2}\cos 2x \right)\, dx
+```
+
+````{admonition} Half-Angle Identity
+```{math}
+\sin^2 \theta =\tfrac{1}{2}(1-\cos 2\theta)=\tfrac{1}{2}-\tfrac{1}{2}\cos 2\theta
+```
+````
+
+`````
+
+`````{tabbed} Step 2
+**Antiderivative:** We've reduced our even power of sine, down to one of our K-form integrals. So at this point we can find the antiderivative.
+```{math}
+\int_0^{\pi/2} \left(\tfrac{1}{2}-\tfrac{1}{2}\cos 2x \right)\, dx= \tfrac{1}{2}x-\tfrac{1}{2}\cdot \left(\tfrac{1}{2}\sin 2x\right) \biggr|_{x=0}^{x=\pi/2}
+```
+
+````{admonition} K-form Integral
+
+```{math}
+\int \cos(kx)\, dx = \tfrac{1}{k}\sin(kx)+C
+```
+````
+
+`````
+
+`````{tabbed} Step 3
+**Evaluate:** Finally we can evaluate: 
+```{math}
+\tfrac{1}{2}x-\tfrac{1}{4}\sin 2x \biggr|_{x=0}^{x=\pi/2} = \biggr( \tfrac{1}{2}\cdot \tfrac{\pi}{2}-\tfrac{1}{4}\sin \pi \biggr) -\biggr( \tfrac{1}{2}\cdot 0-\tfrac{1}{4}\sin 0 \biggr)
+```
+
+And if we remember that $\sin \pi=0$ and $\sin 0 = 0$ we can simplify this down to get:
+
+```{math}
+\int_0^{\pi/2} \sin^2 x \, dx =\dfrac{\pi}{4}
+```
+
+`````
+
+
+``````
+
+
+
+---
+
+
+
+
+## Example 5
+Integrate the following:
+
+$$
+\int \sin^2 x \cos^2 x \, dx
+$$
+
+``````{dropdown} Solution (Click to see the steps.)
+
+`````{tabbed} Step 1
+**Half-Angle:** Our function is already written as a multiple of $\sin^2 x$ and $\cos^2 x$ terms, so we can start by applying our half-angle identities.
+```{math}
+\int \sin^2 x \cos^2 x \, dx&= \int \tfrac{1}{2}(1-\cos 2x)\cdot \tfrac{1}{2}(1+\cos 2x)\, dx \\
+&= \tfrac{1}{4}\int (1-\cos 2x)\cdot (1+\cos 2x)\, dx 
+```
+
+````{admonition} Half-Angle Identities
+```{math}
+\sin^2 \theta &=\tfrac{1}{2}(1-\cos 2\theta)\\
+\cos^2 \theta &=\tfrac{1}{2}(1+\cos 2\theta)
+```
+````
+
+`````
+
+`````{tabbed} Step 2
+**Multiply:** In order to continue the integration, we need to multiply out the terms in our integral:
+```{math}
+\tfrac{1}{4}\int (1-\cos 2x)\cdot (1+\cos 2x)\, dx = \tfrac{1}{4}\int (1-\cos^2 2x)\, dx
+```
+It may help to remember FOIL when you do this:
+
+```{math}
+(1-\cos 2x)\cdot (1+\cos 2x) = 1+\cos 2x -\cos 2x- \cos^2 2x
+```
+
+
+`````
+
+`````{tabbed} Step 3
+**Half-Angle:** Doing the multiplication in the last step increased the exponent on our cosine term (back up to a square). So we need to use our half-angle identities again.
+```{math}
+\tfrac{1}{4}\int (1-\cos^2 2x)\, dx  &= \tfrac{1}{4}\int 1-\left(\tfrac{1}{2}+\tfrac{1}{2}\cos 2(2x)\right)\, dx\\
+ &=\tfrac{1}{4}\int \left( \tfrac{1}{2}-\tfrac{1}{2}\cos 4x \right)\, dx\\
+ &=\tfrac{1}{8}\int \left( 1-\cos 4x \right)\, dx
+```
+
+````{admonition} Half-Angle Identity
+```{math}
+\cos^2 \theta =\tfrac{1}{2}(1+\cos 2\theta)=\tfrac{1}{2}+\tfrac{1}{2}\cos 2\theta
+```
+````
+
+`````
+
+
+
+`````{tabbed} Step 4
+**Antiderivative:** It took us a few tries, but at this point we've reduced our even powers of sine and cosine, down to one of our K-form integrals. So now we're ready to integrate:
+```{math}
+\tfrac{1}{8}\int \left( 1-\cos 4x \right)\, dx = \tfrac{1}{8}\left(x-\tfrac{1}{4}\sin 4x\right) + C
+```
+
+````{admonition} K-form Integral
+
+```{math}
+\int \cos(kx)\, dx = \tfrac{1}{k}\sin(kx)+C
+```
+````
+
+`````
+
+
+
+
+``````
+
+
+## Example 6
+Integrate the following:
+
+$$
+\int \sin^4 x  \, dx
+$$
+
+``````{dropdown} Solution (Click to see the steps.)
+
+
+`````{tabbed} Step 1
+**Break Up:** The first thing we need to do here is rewrite our function as multiples of $\sin^2 x$ and $\cos^2 x$ terms.
+```{math}
+\int \sin^4 x \, dx= \int \sin^2 x \sin^2 x \, dx
+```
+
+`````
+
+
+
+
+`````{tabbed} Step 1
+**Half-Angle:** Next we can apply our half-angle identities.
+```{math}
+\int \sin^2 x \sin^2 x \, dx&= \int \tfrac{1}{2}(1-\cos 2x)\cdot \tfrac{1}{2}(1-\cos 2x)\, dx \\
+&= \tfrac{1}{4}\int (1-\cos 2x)\cdot (1-\cos 2x)\, dx 
+```
+
+````{admonition} Half-Angle Identities
+```{math}
+\sin^2 \theta &=\tfrac{1}{2}(1-\cos 2\theta)\\
+\cos^2 \theta &=\tfrac{1}{2}(1+\cos 2\theta)
+```
+````
+
+`````
+
+`````{tabbed} Step 2
+**Multiply:** In order to continue the integration, we need to multiply out the terms in our integral:
+```{math}
+&= \tfrac{1}{4}\int (1-\cos 2x)\cdot (1-\cos 2x)\, dx\\
+& = \tfrac{1}{4}\int \bigg(1-2\cos 2x+\cos^2 2x\bigg)\, dx
+```
+It may help to remember FOIL when you do this:
+
+```{math}
+(1-\cos 2x)\cdot (1-\cos 2x) = 1-\cos 2x -\cos 2x+\cos^2 2x
+```
+
+
+`````
+
+`````{tabbed} Step 3
+**Half-Angle:** Doing the multiplication in the last step increased the exponent on our cosine term (back up to a square). So we need to use our half-angle identities again.
+```{math}
+& = \tfrac{1}{4}\int \bigg(1-2\cos 2x+\cos^2 2x\bigg)\, dx\\
+& = \tfrac{1}{4}\int \bigg(1-2\cos 2x+\tfrac{1}{2}+\tfrac{1}{2}\cos 4x\bigg)\, dx\\
+& = \tfrac{1}{4}\int \bigg(\tfrac{3}{2}-2\cos 2x+\tfrac{1}{2}\cos 4x\bigg)\, dx
+
+```
+
+````{admonition} Half-Angle Identity
+```{math}
+\cos^2 2x =\tfrac{1}{2}(1+\cos 2(2x))=\tfrac{1}{2}+\tfrac{1}{2}\cos 4x
+```
+````
+
+`````
+
+
+
+`````{tabbed} Step 4
+**Antiderivative:** It took us a few tries, but at this point we've reduced our even powers of sine and cosine, down to one of our K-form integrals. So now we're ready to integrate:
+```{math}
+& = \tfrac{1}{4}\int \bigg(\tfrac{3}{2}-2\cos 2x+\tfrac{1}{2}\cos 4x\bigg)\, dx\\
+&= \tfrac{1}{4}\bigg(\tfrac{3}{2}x-\sin 2x+\tfrac{1}{8}\sin 4x\bigg) + C
+```
+And as always when we do an indefinite integral, we need to remember the +C at the end.
+
+
+````{admonition} K-form Integral
+
+```{math}
+\int \cos(kx)\, dx = \tfrac{1}{k}\sin(kx)+C
+```
+````
+
+`````
+
+
+
+
+``````
+
+
+## Different Angles
+
+Sometimes we will come across trig integrals where the inner functions, the angles, are different. In these cases it will be helpful to use: 
+
+
+````{admonition} Different Angle Trig Identities
+```{math}
+\sin A \cos B &=\tfrac{1}{2}\bigg(\sin(A-B)+\sin(A+B)\bigg)\\
+\sin A \sin B &=\tfrac{1}{2}\bigg(\cos(A-B)-\cos(A+B)\bigg)\\
+\cos A \cos B &=\tfrac{1}{2}\bigg(\cos(A-B)+\cos(A+B)\bigg)
+```
+````
+
+
+## Example 7
+Integrate the following:
+
+$$
+\int \sin3x \cos7x  \, dx
+$$
+
+``````{dropdown} Solution (Click to see the steps.)
+
+`````{tabbed} Step 1
+**Different Angle:** The trig functions have different angles so we can apply our different angle identity.
+```{math}
+\int \sin3x \cos7x  \, dx &= \tfrac{1}{2}\int \bigg(\sin(3x-7x)+\sin(3x+7x)\bigg)\, dx \\
+&= \tfrac{1}{2}\int \bigg(\sin(-4x)+\sin(10x)\bigg)\, dx
+
+```
+````{admonition} Different Angle Trig Identities
+```{math}
+\sin A \cos B =\tfrac{1}{2}\bigg(\sin(A-B)+\sin(A+B)\bigg)\\
+
+```
+````
+
+`````
+
+`````{tabbed} Step 2
+**K-form Integrals:** Each of these is now one of our k-form integrals, which we can just integrate:
+```{math}
+&= \tfrac{1}{2}\int \bigg(\sin(-4x)+\sin(10x)\bigg)\, dx \\
+&= \tfrac{1}{2}\bigg(\tfrac{1}{4}\cos(-4x)-\tfrac{1}{10}\cos(10x)\bigg)+C
+
+```
+
+And as always when we do an indefinite integral, we need to remember the +C at the end.
+
+
+
+````{admonition} K-form Integrals
+
+```{math}
+\int \sin(kx)\, dx = -\tfrac{1}{k}\cos(kx)+C
+```
+
+
+`````
+
+
+
+
+
+``````
