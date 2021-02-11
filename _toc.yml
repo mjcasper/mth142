@@ -13,3 +13,4 @@
     - file: parts-indefinite
     - file: parts-definite
     - file: trig-sine-cosine
+    - file: trig-tangent-secant
