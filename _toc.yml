@@ -8,9 +8,12 @@
     - file: basic-integration
 - file: intermediate
   sections:
-    - file: sub-indefinite
-    - file: sub-definite
-    - file: parts-indefinite
-    - file: parts-definite
-    - file: trig-sine-cosine
-    - file: trig-tangent-secant
+    - file: intermediate/sub-indefinite
+    - file: intermediate/sub-definite
+    - file: intermediate/parts-indefinite
+    - file: intermediate/parts-definite
+    - file: intermediate/trig-sine-cosine
+    - file: intermediate/trig-tangent-secant
+- file: advanced
+  sections:
+    - file: advanced/trig-substitution
