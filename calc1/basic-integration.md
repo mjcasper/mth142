@@ -3,13 +3,13 @@ Basic Integration
 
 ## Elementary Forms
 
-\begin{align*}
+```{math}
  &\displaystyle{\int e^x \; dx} = e^x +C &  &\displaystyle{\int \dfrac{1}{x} \; dx} = \ln |x|+C \\ 
  &\displaystyle{\int \sin x \; dx} = -\cos x +C &  &\displaystyle{\int \cos x \; dx} = \sin x+C \\ 
  &\displaystyle{\int \sec^2 x \; dx} = \tan x +C &  &\displaystyle{\int \csc^2 x \; dx} = -\cot x+C  \\ 
-  &\displaystyle{\int \sec x \tan x \; dx} = \sec x +C &  &\displaystyle{\int \csc x \cot x \; dx} = -\csc x+C \\ 
+  &\displaystyle{\int \sec x \tan x \; dx} = \sec x +C \qquad &  &\displaystyle{\int \csc x \cot x \; dx} = -\csc x+C \\ 
     &\displaystyle{\int \dfrac{1}{1+x^2} \; dx} = \tan^{-1} x +C &  &\displaystyle{\int \dfrac{1}{\sqrt{1-x^2}} \; dx} = \sin^{-1} x+C \\ 
-\end{align*}
+```
 
 
 ## Power Rule

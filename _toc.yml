@@ -4,8 +4,8 @@
 - file: intro
 - file: calc1
   sections:
-    - file: derivatives
-    - file: basic-integration
+    - file: calc1/derivatives
+    - file: calc1/basic-integration
 - file: intermediate
   sections:
     - file: intermediate/sub-indefinite

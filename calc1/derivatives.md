@@ -6,28 +6,28 @@ Differentiation
 
 ### Trigonometric Functions
 
-\begin{align*}
+```{math}
  &\dfrac{d}{dx}\big[\sin x\big] = \cos x &  & \dfrac{d}{dx}\big[\cos x\big] = -\sin x \\ 
- &\dfrac{d}{dx}\big[\sec x\big] = \sec x \tan x&  & \dfrac{d}{dx}\big[\csc x\big] = -\csc x \cot x\\ 
+ &\dfrac{d}{dx}\big[\sec x\big] = \sec x \tan x \qquad &  & \dfrac{d}{dx}\big[\csc x\big] = -\csc x \cot x\\ 
  &\dfrac{d}{dx}\big[\tan x\big] = \sec^2 x &  & \dfrac{d}{dx}\big[\cot x\big] = -\csc^2 x \\  
-\end{align*}
+```
 
 ---
 
 ### Inverse Trigonometric Functions
-\begin{align*}
- &\dfrac{d}{dx}\big[\sin^{-1} x\big] = \dfrac{1}{\sqrt{1-x^2}} &  & \dfrac{d}{dx}\big[\cos^{-1} x\big] = -\dfrac{1}{\sqrt{1-x^2}} \\ 
+```{math}
+ &\dfrac{d}{dx}\big[\sin^{-1} x\big] = \dfrac{1}{\sqrt{1-x^2}} \qquad &  & \dfrac{d}{dx}\big[\cos^{-1} x\big] = -\dfrac{1}{\sqrt{1-x^2}} \\ 
  &\dfrac{d}{dx}\big[\tan^{-1} x\big] = \dfrac{1}{1+x^2} &  &  \\  
-\end{align*}
+```
 
 ---
 ### Exponential and Logarithmic Functions
 
-\begin{align*}
+```{math}
  &\dfrac{d}{dx}\big[e^x\big] = e^x &  & \dfrac{d}{dx}\big[\ln x\big] = \dfrac{1}{x} \\ 
- &\dfrac{d}{dx}\big[b^x\big] = b^x \ln b &  & \dfrac{d}{dx}\big[\ln \lvert x\rvert \big] = \dfrac{1}{x} \\ 
+ &\dfrac{d}{dx}\big[b^x\big] = b^x \ln b \qquad &  & \dfrac{d}{dx}\big[\ln \lvert x\rvert \big] = \dfrac{1}{x} \\ 
  & &  & \dfrac{d}{dx}\big[\log_b x\big] = \dfrac{1}{x\ln b} \\  
-\end{align*}
+```
 
 ---
 
