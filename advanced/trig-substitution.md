@@ -536,3 +536,300 @@ And finally plugging all of these pieces into our antiderivative gives us the an
   &= 2\sin^{-1}\left(\dfrac{x}{2}\right)- \tfrac{1}{2}\cdot x\sqrt{4-x^2} +C \\[10pt]
 ```
 ``````
+
+## U-Substitution?
+
+Even if we see a square root term in our integral, we don't always need to use a trig substitution. Let's compare the following two integrals:
+
+````{panels}
+Substitution Rule
+^^^
+```{math}
+\int \dfrac{x}{\sqrt{x^2-9}}\, dx
+```
+
+---
+
+Trig Substitution
+^^^
+```{math}
+\int \dfrac{1}{\sqrt{x^2-9}}\, dx
+```
+````
+
+The obvious choice for $u$ in each of these is $u=x^2-9$. However, when we calculate $du$, we see that we can only make the differentials match in the first integral. This is because if $u=x^2-9$ then,
+
+```{math}
+du= 2x \, dx
+```
+
+The first integral has an $x\, dx$, but our second integral only has the $dx$.
+
+
+## General Trig Sub
+
+Occasionally, we come across integrals involving square root terms of the form:
+
+
+````{panels}
+:column: col-4
+```{math}
+\sqrt{a^2-b^2x^2}
+```
+---
+```{math}
+\sqrt{a^2+b^2x^2}
+```
+---
+```{math}
+\sqrt{b^2x^2-a^2}
+```
+````
+In which case we would use:
+````{panels}
+:column: col-4
+```{math}
+x = \tfrac{a}{b}\sin \theta
+```
+---
+```{math}
+x = \tfrac{a}{b}\tan \theta
+```
+---
+```{math}
+x = \tfrac{a}{b}\sec \theta
+```
+````
+
+## Example 5
+Use a trigonometric substitution to rewrite this integral as a trig integral. 
+
+$$
+\int \dfrac{1}{(9x^2-25)^{3/2}}\;dx
+$$
+
+``````{dropdown} Solution (Click to see the steps.)
+
+````{tabbed} Step 1
+**Identify Trig Sub:** It may be helpful to rewrite this integral with an explicit square root:
+
+
+```{math}
+\int \dfrac{1}{(9x^2-25)^{3/2}}\;dx &= \int \dfrac{1}{\left((9x^2-25)^{1/2}\right)^3}\;dx\\[10pt]
+&= \int \dfrac{1}{\left(\sqrt{9x^2-25}\right)^3}\;dx\\
+```
+From here, we can see that it is in the form $\sqrt{b^2x^2-a^2}$ so we choose $x=\tfrac{a}{b}\sec\theta$.
+
+Note that:
+- $a=5$, since $\sqrt{25}=5$
+- $b=3$, since $\sqrt{9}=3$
+
+This means we choose: $x=\tfrac{5}{3}\sec\theta$.
+
+````
+
+
+
+````{tabbed} Step 2
+**Calculate All Pieces:** We have $x=\tfrac{5}{3}\sec\theta$, which means:
+
+```{math}
+x&=\tfrac{5}{3}\sec\theta\\
+dx&=\tfrac{5}{3}\sec\theta\tan\theta \, d\theta\\
+\sqrt{9x^2-25}&=5\tan\theta
+```
+
+Let's check that square root simplication:
+
+```{math}
+\sqrt{9x^2-25}&= \sqrt{9 \left(\tfrac{5}{3}\sec\theta \right)^2-25}\\[10pt]
+&= \sqrt{9 \left(\tfrac{25}{9}\sec^2\theta \right)-25}\\[10pt]
+&= \sqrt{25\sec^2\theta -25}\\[10pt]
+&= \sqrt{25\left(\sec^2\theta -1\right)}\\[10pt]
+&= \sqrt{25\tan^2\theta}\\[10pt]
+&= 5\tan\theta\\[10pt]
+```
+````
+
+`````{tabbed} Step 3
+**Trig Integral:** Now we have all our pieces:
+
+```{math}
+x&=\tfrac{5}{3}\sec\theta\\
+dx&=\tfrac{5}{3}\sec\theta\tan\theta \, d\theta\\
+\sqrt{9x^2-25}&=5\tan\theta
+```
+So let's plug everything into our integral:-
+
+```{math}
+&= \int \dfrac{1}{\left(\sqrt{9x^2-25}\right)^3}\;dx\\[10pt]
+&= \int \dfrac{1}{\left(5\tan \theta\right)^3}\cdot\tfrac{5}{3}\sec\theta\tan\theta \, d\theta\\[10pt]
+&= \int \dfrac{1}{\left(5\tan \theta\right)^2}\cdot\tfrac{1}{3}\sec\theta \, d\theta\\[10pt]
+&= \dfrac{1}{75}\int \dfrac{\sec\theta}{\tan^2 \theta} \, d\theta\\
+```
+
+
+
+`````
+
+``````
+
+## Example 6
+
+Integrate the following:
+
+$$
+\int_{-1}^{0} \dfrac{x}{\sqrt{3-2x-x^2}} \, dx 
+$$
+
+
+``````{dropdown} Solution (Click to see the steps.)
+
+````{tabbed} Step 0
+Looking at this integral, we see that the function is not explicitly in the correct format for a trig substitution. So to get started, we're going to first:
+- complete the square for that term under the square root
+- apply a $u$-substitution
+
+Once we do all of this, we'll have an integral in the correct format for a trig substitution. 
+
+**Completing the Square:** 
+
+Factor off any constants, so that our first term is an $x^2$
+
+```{math}
+3-2x-x^2 &= -\left( x^2+2x \qquad -3\right)\\
+```
+We've intentially left a space in between the $2x$ and the $-3$. Because we're going to take the constant in front of the $x$, divide whatever it is by $2$, square that result and then add in fancy 0. 
+
+So in this case specifically we're going to take the $2$ from the $2x$ and:
+
+```{math}
+2 \quad \longrightarrow \quad \dfrac{2}{2}=1 \quad \longrightarrow \quad 1^2=1 \quad \longrightarrow \quad +1 -1
+```
+
+And that $+1-1$ is what we're going to put in that extra space:
+
+```{math}
+3-2x-x^2 &= -\left( x^2+2x \qquad -3\right)\\[5pt]
+&= -\left( x^2+2x +1 -1 -3\right)\\[5pt]
+&= -\left( (x^2+2x +1) + (-1 -3)\right)\\[5pt]
+&= -\left( (x+1)^2 -4\right)\\[5pt]
+&= 4- (x+1)^2 \\
+```
+
+Let's rewrite our function using this, to see where we're at:
+
+```{math}
+\int_{-1}^{0} \dfrac{x}{\sqrt{3-2x-x^2}} \, dx  &= \int_{-1}^{0} \dfrac{x}{\sqrt{4- (x+1)^2}} \, dx \\
+```
+
+**U-Substitution:** It's looking better, but finally to get our usual trig substitution form we need to do a $u$-substitution with:
+
+```{math}
+u &= x+1 \quad \longrightarrow \quad x=u-1\\
+du &= dx
+```
+
+And converting the limits of integration:
+
+```{math}
+x = 0 &\quad \longrightarrow \quad u=1\\
+x = -1 &\quad \longrightarrow \quad u=0
+```
+
+Putting all of this together gives us:
+
+```{math}
+&= \int_{-1}^{0} \dfrac{x}{\sqrt{4- (x+1)^2}} \, dx \\
+&= \int_{0}^{1} \dfrac{u-1}{\sqrt{4- u^2}} \, du \\
+```
+
+And there we go, that's our usual $\sqrt{a^2-u^2}$ form!
+
+````
+
+
+````{tabbed} Step 1
+Now it comes down to calculating:
+
+```{math}
+&= \int_{0}^{1} \dfrac{u-1}{\sqrt{4- u^2}} \, du \\
+```
+
+
+**Identify Trig Sub:** We start by looking at our square root term to help us identify our choice for $u$.
+
+```{math}
+\sqrt{4-u^2}=\sqrt{2^2-u^2}
+```
+
+We see that it is of the form $\sqrt{a^2-u^2}$. So we choose: $u=2\sin \theta$. 
+
+Note that $a=2$, since $\sqrt{4}=2$
+
+````
+
+````{tabbed} Step 2
+**Calculate All Pieces:** We have $u=2\sin \theta$, which means:
+
+```{math}
+u&=2\sin\theta\\
+du&=2\cos\theta d\theta\\
+\sqrt{4-u^2}&=2\cos \theta
+```
+
+Plugging all of this into the integral gives us:
+
+```{math}
+\int_{0}^{1} \dfrac{u-1}{\sqrt{4- u^2}} \, du  = \int_{u=0}^{u=1} \dfrac{2\sin\theta-1}{2\cos \theta}   \cdot 2 \cos \theta \, d\theta 
+```
+````
+
+`````{tabbed} Step 3
+**Trig Integral:** Now we can simplify the resulting trig integral and integrate using all of our trig integral techniques:
+
+```{math}
+ &= \int_{u=0}^{u=1} \dfrac{2\sin\theta-1}{2\cos \theta}   \cdot 2 \cos \theta \, d\theta  \\[10pt]
+ &= \int_{u=0}^{u=1} \left(2\sin\theta-1\right) \, d\theta  \\
+```
+
+We can just do the integration here to get:
+
+```{math}
+ &= -2\cos\theta-\theta \biggr|_{u=0}^{u=1}  \\
+```
+
+
+
+`````
+
+`````{tabbed} Step 4
+So far we have:
+```{math}
+ &= -2\cos\theta-\theta \biggr|_{u=0}^{u=1}  \\
+```
+
+
+**Convert Back:** At this point we need to convert back to $u$, so let's start with the pieces we calculated: 
+```{math}
+u&=2\sin\theta\\
+du&=2\cos\theta \, d\theta\\
+\sqrt{4-u^2}&=2\cos \theta
+```
+From these pieces we see: $\cos \theta = \sqrt{4-u^2}$, so we'll be able to use that.
+
+We then use our choice of $u$ to solve for $\theta$:
+```{math}
+u=2\sin\theta \hspace{0.5em} \longrightarrow \hspace{0.5em} \sin\theta = \tfrac{u}{2 }\hspace{0.5em} \longrightarrow \hspace{0.5em}\theta = \sin^{-1}\left(\tfrac{u}{2}\right)
+
+```
+
+Putting this all together gives us:
+```{math}
+ &= -2\cos\theta-\theta \biggr|_{u=0}^{u=1}  \\[10pt]
+ &= -\sqrt{4-u^2}-\sin^{-1}\left(\tfrac{u}{2}\right) \biggr|_{u=0}^{u=1}  \\[10pt]
+ &= \bigg(-\sqrt{3}-\sin^{-1}\left(\tfrac{1}{2}\right)\bigg)- \bigg( -\sqrt{4}-\sin^{-1}\left(\tfrac{0}{2}\right)  \bigg) \\[10pt]
+  &= \bigg(-\sqrt{3}-\frac{\pi}{6}\bigg)- \bigg( -\sqrt{4}-0  \bigg) \\[10pt]
+  &= 2-\sqrt{3}-\frac{\pi}{6} 
+```
+``````
