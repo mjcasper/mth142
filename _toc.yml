@@ -17,3 +17,4 @@
 - file: advanced
   sections:
     - file: advanced/trig-substitution
+    - file: advanced/partial-fractions
