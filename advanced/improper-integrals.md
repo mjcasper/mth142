@@ -628,3 +628,372 @@ In Example 4, we see:
 
 ```
 
+## Discontinuous Functions
+
+One other type of improper integral occurs when the function we are integrating has a discontinuity somewhere in the interval $[a,b]$. This could happen at:
+- one of the endpoints, $\quad x=a\quad$ or $\quad x=b$
+- some number $c$ in the middle, $\quad a < c < b$
+
+What are some of the discontinuities we might encounter?
+
+- jump discontinuities
+- removable discontinuities
+- infinite discontinuities
+
+### Improper Integrals
+
+
+
+
+```{admonition} (Right Hand) Improper Integral
+If $f$ is continuous on $(a,b]$ and discontinuous at $a$, then
+
+$$
+\int_a^{b} f(x)\, dx = \lim_{t\to a^+} \int_t^{b} f(x)\, dx
+$$
+
+```
+
+
+
+
+
+```{admonition} (Left Hand) Improper Integral
+If $f$ is continuous on $[a,b)$ and discontinuous at $b$, then
+
+$$
+\int_a^{b} f(x)\, dx = \lim_{t\to b^-} \int_a^{t} f(x)\, dx
+$$
+
+```
+
+
+
+```{admonition} Improper Integral
+If $f$ is discontinuous at $x=c$ where $a<c<b$ and both left and right improper integrals are convergent, then:
+
+$$
+\int_{a}^{b} f(x)\, dx = \int_a^{c} f(x)\, dx +\int_c^{b} f(x)\, dx 
+$$
+
+(We need to split this integral at the discontinuity $x=c$.)
+
+```
+
+### Convergent and Divergent
+
+In each of the left and right cases, we say that the improper integral is **convergent** if the limit exists. If the limit does not exist, then we say the improper integral is **divergent.** 
+
+The improper integral over the interval $[a,b]$ with a discontinuity somewhere in the middle at $x=c$ is:
+1. **convergent** only if left and right improper integrals are both convergent. 
+2. **divergent** if at least one of the left and right improper integrals is divergent. 
+
+### Area Interpretation
+
+For non-negative functions we interpret these improper integrals as representing the **area under the curve** $y=f(x)$ and above the $x$-axis.
+
+```{panels}
+(Left) Improper Integral
+^^^
+![improper1](../images/improper-discontinuous-1.png)
+
+---
+(Right) Improper Integral
+^^^
+![improper1](../images/improper-discontinuous-2.png)
+
+```
+
+```{panels}
+Improper Integral
+^^^
+![improper1](../images/improper-discontinuous-3.png)
+
+
+```
+
+
+## Important Infinite Limits
+
+### $c/0$-forms
+
+These occur when we have division in our function. So we will always be on the look out now, for where our denominator is equal to 0. Note that these types can occur with:
+- **power functions** where division is explicitly written e.g. $\dfrac{1}{x-5}$
+- **trigonometric functions** where the division is a bit more subtle e.g. $\tan x = \dfrac{\sin x}{\cos x}$
+
+```{panels}
+Step 1
+^^^
+Identify that you have a $c/0$-form:
+
+- non-zero number in the numerator
+- zero in the denominator 
+
+---
+
+Step 2
+^^^
+Use a test number to decide if the limit is 
+
+$$
++\infty \text{ or }-\infty
+$$
+
+(You need to test the left and right sides separately.)
+
+```
+
+
+
+
+### Special Cases
+
+```{panels}
+Logarithmic Functions
+^^^
+$$
+\lim_{x\to 0^+} \ln x=-\infty
+$$
+
+---
+
+Trigonometric Functions
+^^^
+
+$$
+\tan x \qquad &\sec x \\[5pt]
+\cot x \qquad &\csc x \\[5pt]
+$$
+
+all have infinite limits
+
+```
+
+
+
+
+## Example 5
+Determine if the following improper integral is convergent or divergent. If convergent, find its value:
+
+$$
+\int_{1}^{4} \dfrac{1}{\sqrt{x-1}}\, dx 
+$$
+
+
+``````{dropdown} Solution (Click to see the steps.)
+
+
+
+`````{tabbed} Step 0
+The function we are integrating is undefined at the endpoint $x=1$. We can actually say a bit more: it has an infinite limit at $x=1$.
+
+
+We know this, because at $x=1$ the numerator of our function is a non-zero number but the denominator is zero. This means we have one of our $\tfrac{c}{0}$-forms and can use a test number (maybe $t=1.1$) to find:
+
+$$
+\lim_{a\to1^{+}} \dfrac{1}{\sqrt{x-1}} = \infty
+$$
+
+
+
+`````
+
+`````{tabbed} Step 1
+We start by writing the improper integral as a limit:
+
+$$
+\int_{1}^{4} \dfrac{1}{\sqrt{x-1}}\, dx    = \lim_{a\to 1^{+}} \int_{a}^{4} \dfrac{1}{\sqrt{x-1}}\, dx 
+$$
+
+
+
+
+`````
+
+
+
+`````{tabbed} Step 2
+Next we work on calculating the resulting definite integral:
+
+$$
+  & \lim_{a\to 1^{+}} \int_{a}^{4} \dfrac{1}{\sqrt{x-1}}\, dx\\[10pt]
+= & \lim_{a\to 1^{+}} \int_{a}^{4} (x-1)^{-1/2} \, dx \\[10pt]
+= & \lim_{a\to 1^{+}} 2(x-1)^{1/2} \biggr|_{x=a}^{x=4}\\[10pt]
+= & \lim_{a\to 1^{+}} \bigg(2(4-1)^{1/2}-2(a-1)^{1/2}\bigg)\\[10pt]
+= & \lim_{a\to 1^{+}} \bigg(2\sqrt{3}-2(a-1)^{1/2}\bigg)\\[10pt]
+$$
+
+
+`````
+
+`````{tabbed} Step 3
+Finally, we calculate the limit (using all of our techniques we learned back in Calculus 1.)
+
+$$
+\lim_{a\to 1^{+}} \bigg(2\sqrt{3}-2(a-1)^{1/2}\bigg) &= 2\sqrt{3}-2(1-1)^{1/2} \\[10pt]
+&= 2\sqrt{3} \\[10pt]
+$$
+
+Why? 
+
+Since the function $(a-1)^{1/2}$ is defined and continuous at $a=1$, we can calculate this limit by directly plugging $a=1$ into the expression.
+
+
+
+
+
+`````
+
+
+`````{tabbed} Conclusion
+We have shown that the improper integral
+
+$$
+\int_{1}^{4} \dfrac{1}{\sqrt{x-1}}\, dx   = 2\sqrt{3}
+$$
+
+and is therefore **convergent.**
+
+`````
+
+
+
+
+
+
+
+``````
+
+
+
+
+
+## Example 6
+
+Determine if the following improper integral is convergent or divergent. If convergent, find its value:
+
+$$
+\int_{0}^{7} \dfrac{1}{x-5}\, dx 
+$$
+
+
+
+
+``````{dropdown} Solution (Click to see the steps.)
+
+
+
+`````{tabbed} Step 0
+The function we are integrating is undefined at $x=5$ which occurs inside the interval $[0,7]$. We can actually say a bit more: it has an infinite limit at $x=5$.
+
+
+We know this, because at $x=5$ the numerator of our function is a non-zero number but the denominator is zero. This means we have one of our $\tfrac{c}{0}$-forms and can use test numbers to find that:
+
+$$
+\lim_{b\to5^{-}} \dfrac{1}{x-5} &= -\infty\\[10pt]
+\lim_{b\to5^{+}} \dfrac{1}{x-5} &= \infty\\[10pt]
+$$
+
+
+
+`````
+
+
+`````{tabbed} Step 1
+Since the infinite discontinuity occurs inside the interval $[0,7]$ we start by splitting up the integral into left and right improper integrals based on this discontinuity:
+
+$$
+\int_{0}^{7} \dfrac{1}{x-5}\, dx   = \int_{0}^{5} \dfrac{1}{x-5}\, dx  + \int_{5}^{7} \dfrac{1}{x-5}\, dx 
+$$
+
+
+In order for our original improper integral to be convergent, both the left and right improper integrals need to be convergent. This means we need to calculate each of these separately.
+
+Let's start with the left improper integral:
+
+$$
+\int_{0}^{5} \dfrac{1}{x-5}\, dx 
+$$
+
+`````
+
+
+
+`````{tabbed} Step 2
+We start calculating the left improper integral by writing it as a limit:
+
+$$
+\int_{0}^{5} \dfrac{1}{x-5}\, dx   = \lim_{b\to5^{-}} \int_{0}^{b} \dfrac{1}{x-5}\, dx 
+$$
+
+
+
+
+`````
+
+
+
+`````{tabbed} Step 3
+Next we work on calculating the resulting definite integral:
+
+$$
+\lim_{b\to5^{-}} \int_{0}^{b} \dfrac{1}{x-5}\, dx  & = \lim_{b\to5^{-}} \ln|x-5| \biggr|_{x=0}^{x=b}\\[10pt]
+& = \lim_{b\to5^{-}} \bigg(\ln|b-5|-\ln|0-5|\bigg)\\[10pt]
+& = \lim_{b\to5^{-}} \bigg(\ln|b-5|-\ln 5\bigg)\\[10pt]
+$$
+
+
+`````
+
+`````{tabbed} Step 4
+Finally, we calculate the limit (using all of our techniques we learned back in Calculus 1.)
+
+$$
+\lim_{b\to5^{-}} \bigg(\ln|b-5|-\ln 5\bigg)= -\infty
+$$
+
+Why? 
+
+As $b\to 5^{-}$, the term inside the log function $|x-5|\to 0^{+}$ and we know that whenever the term inside the log function approaches $0$ from the right, the output of the log function approaches $-\infty$. More explicitly:
+
+$$
+\lim_{x\to 0^{+}} \ln x = -\infty
+$$
+
+
+
+
+
+`````
+
+
+`````{tabbed} Conclusion
+We have shown that the left improper integral
+
+$$
+\int_{0}^{5} \dfrac{1}{x-5}\, dx  = -\infty
+$$
+
+and is therefore **divergent.**
+
+
+This automatically means that our original improper integral is **divergent** as well. So without needing to calculate the right improper integral, we can conclude that 
+
+$$
+\int_{0}^{7} \dfrac{1}{x-5}\, dx 
+$$
+
+is divergent.
+
+
+`````
+
+
+
+
+
+
+
+``````
+
+
