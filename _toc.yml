@@ -21,3 +21,6 @@
     - file: advanced/integrating-partial-fractions
     - file: advanced/improper-integrals
     - file: advanced/p-form-integrals
+- file: series
+  sections:
+    - file: series/sequences

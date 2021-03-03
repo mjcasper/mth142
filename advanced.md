@@ -8,5 +8,5 @@ This unit of the course will cover learning outcomes:
 - AI-3 Calculate the partial fraction decomposition of a rational function.
 - AI-4 Evaluate the integral of a rational function using a partial fraction decomposition.
 - AI-5 Determine whether an improper integral is convergent or divergent, and if convergent, be able to evaluate the integral. 
-
+- AI-6 Determine whether a $p$-form improper integral is convergent or divergent. If convergent, be able to evaluate the integral. 
 
