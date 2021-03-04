@@ -24,3 +24,4 @@
 - file: series
   sections:
     - file: series/sequences
+    - file: series/limits-sequences
