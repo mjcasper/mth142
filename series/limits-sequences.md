@@ -426,7 +426,7 @@ If $\displaystyle \lim_{n\to\infty} |a_n|=0$, then $\displaystyle \lim_{n\to\inf
 
 ```
 
-<!--
+
 ## Example 6
 
 Calculate the following limit:
@@ -436,11 +436,172 @@ Calculate the following limit:
 ```
 
 ````{dropdown} Solution (Click to see the steps.)
+```{tabbed} Graph It
+To see what's going on with this sequence it may be helpful to rewrite it as:
 
+$$
+(-1)^n\cdot \dfrac{1}{n^2}
+$$
 
+From here we can see that the $(-1)^n$ term will give us an alternating pattern. But the $\tfrac{1}{n^2}$ will make everything shrink down to 0.
+
+```
+
+```{tabbed} Absolute Value
+
+So to calculate the limit, we first look at the sequence of absolute values:
+
+$$
+\lim_{n\to\infty} \left|\dfrac{(-1)^n}{n^2}\right| = \lim_{n\to\infty} \dfrac{1}{n^2} =0
+$$
+
+(The limit is 0, since this is a $\tfrac{c}{\infty}$ form.)
+```
+
+```{tabbed} Theorem
+
+Applying the theorem, we can conclude that since the limit of the absolute value terms is 0:
+
+$$
+\lim_{n\to\infty} \left|\dfrac{(-1)^n}{n^2}\right| =0
+$$
+
+the limit of the original sequence must be 0 as well:
+
+$$
+\lim_{n\to\infty} \dfrac{(-1)^n}{n^2} =0
+$$
+```
 
 ````
 
 ![sequence2](../images/alternating-sequence2.png)
 
--->
+
+
+## Geometric Sequence
+
+A geometric sequence is a sequence of the form: 
+
+$$
+\left\{ r^n \right\} \qquad \text{or}\qquad \left\{ ar^n \right\}
+$$
+
+
+
+```{admonition} Geometric Sequence
+A geometric sequence $\left\{ a r^n \right\}$ converges when either $|r|<1$ or $r=1$ and it diverges for all other $r$ values.
+
+```
+
+
+
+### Positive r-values
+
+In the graph below, we can see an example of three different geometric series, all with positive $r$ values.
+
+![geometric-sequence1](../images/geometric-sequence1.png)
+
+```{panels}
+When $r>1$
+^^^
+The sequence is on an **exponentially growing** curve and so the limit goes to infinity.
+
+---
+When $0<r<1$
+^^^
+The sequence is on an **exponentially decaying** curve and so the limit goes to 0.
+
+```
+
+(And when $r=1$, we have the special case where the sequence is constantly 1.)
+
+### Negative r-values
+
+In the next graph, we have an example of three different geometric series, all with negative $r$ values. And here we see the usual alternating pattern: 
+
+$$
+\quad - \quad + \quad - \quad + \quad \cdots
+$$
+
+
+![geometric-sequence2](../images/geometric-sequence2.png)
+
+
+```{panels}
+When $r<-1$
+^^^
+The sequence alternates between points on a curve growing exponentially positive and a curve growing exponentially negative.  
+
+---
+When $-1<r<0$
+^^^
+The sequence alternates between positive and negative values, but with values that are exponentially decaying towards 0.
+
+```
+
+### Limits
+
+From all of these different cases we see that:
+
+
+
+$$
+\lim_{n\to \infty} r^n  & = DNE \quad \text{if} \quad r\leq -1 \\[10pt]  
+ & = 0 \quad \text{if} \quad  -1 < r < 1 \\[10pt]  
+ & = 1 \quad \text{if} \quad  r=1 \\[10pt]  
+ & = \infty \quad \text{if} \quad  1< r \\[10pt]  
+$$
+
+
+
+
+## Example 7 
+
+Calculate the following limit:
+
+```{math}
+\lim_{n\to\infty}\dfrac{(-3)^n}{5^{n+1}}
+```
+
+````{dropdown} Solution (Click to see the steps.)
+
+```{tabbed} Motivation
+We see that the terms in the numerator and in the denominator both are being raised to the power $n$. So our goal is to try and rewrite this as a geometric sequence in the form $\left\{ ar^n \right\}$
+```
+
+```{tabbed} Strategy
+We want just an $n$ in the exponent, so that means the $5^{n+1}$ needs to be broken up:
+
+$$
+\dfrac{(-3)^n}{5^{n+1}} = \dfrac{(-3)^n}{5\cdot 5^{n}} = \dfrac{1}{5}\cdot \dfrac{(-3)^n}{5^{n}}
+$$
+
+From here, we can use an exponent law to essentially "factor off" the common exponent:
+
+$$
+= \dfrac{1}{5}\cdot \left(\dfrac{-3}{5}\right)^n
+$$
+
+```
+
+```{tabbed} Identify r-value
+
+And here we go!
+
+$$
+\dfrac{1}{5}\cdot \left(\dfrac{-3}{5}\right)^n
+$$
+
+We have a geometric sequence written in the standard form $\left\{ ar^n \right\}$, where $a$ is that constant in front and $r$ is the number being raised to the power $n$.
+
+In our case, we see that $a=\tfrac{1}{5}$ and $r=\tfrac{-3}{5}$. And since $|r|=\left|\tfrac{-3}{5}\right|<1$, we can conclude that this sequence converges and:
+
+$$
+\lim_{n\to\infty}\dfrac{(-3)^n}{5^{n+1}}=0
+$$
+
+(Note: only the $r$ value determines whether the sequence converges or not.)
+```
+
+````
