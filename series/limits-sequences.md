@@ -595,7 +595,7 @@ $$
 
 We have a geometric sequence written in the standard form $\left\{ ar^n \right\}$, where $a$ is that constant in front and $r$ is the number being raised to the power $n$.
 
-In our case, we see that $a=\tfrac{1}{5}$ and $r=\tfrac{-3}{5}$. And since $|r|=\left|\tfrac{-3}{5}\right|<1$, we can conclude that this sequence converges and:
+In our case, we see that $a=\tfrac{1}{5}$ and $r=\tfrac{-3}{5}$. And since $|r|=\left|\tfrac{-3}{5}\right|<1$, we  conclude that this sequence converges and the limit is 0.
 
 $$
 \lim_{n\to\infty}\dfrac{(-3)^n}{5^{n+1}}=0

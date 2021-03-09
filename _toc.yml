@@ -25,3 +25,4 @@
   sections:
     - file: series/sequences
     - file: series/limits-sequences
+    - file: series/partial-sums
