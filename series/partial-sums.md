@@ -139,7 +139,6 @@ $$
 ````
 
 
-<!--
 
 ---
 
@@ -181,34 +180,59 @@ Show that the following series is convergent and find its sum.
 
 ````{dropdown} Solution (Click to see the steps.)
 
-```{tabbed} Step 1
-We notice that the $n$-values start with $n=3$. To find the first four terms of the sequence, we will plug $n=3$, $n=4$, $n=5$, and $n=6$ into the formula of the general term:
+```{tabbed} Partial Fractions
+We start by performing a partial fraction decomposition of this general term (it has two distinct linear terms).
+
 
 $$
-a_n=(-1)^n (n+1)
+ \dfrac{1}{n(n+1)} = \dfrac{1}{n}-\dfrac{1}{n+1}
 $$
+
+(try working the details of this for practice!)
 
 ```
 
-```{tabbed} Step 2
+```{tabbed} Partial Sums
 
-Let's calculate these:
+We want to find the sum of this series, so this means we need to find the general term $s_n$ of our sequence of partial sums. To help us find this general term we write out the first few terms of the sequence, and see if we can identify the pattern:
 
 $$
-n=3 & \quad \longrightarrow \quad & (-1)^3 (3+1) = -4\\[10pt]
-n=4 & \quad \longrightarrow \quad & (-1)^4 (4+1) = 5\\[10pt]
-n=5 & \quad \longrightarrow \quad & (-1)^5 (5+1) = -6 \\[10pt]
-n=6 & \quad \longrightarrow \quad & (-1)^6 (6+1) = 7\\[10pt]
+s_1 & = \dfrac{1}{1}-\dfrac{1}{2} \\[5pt]
+s_2 & = \left(\dfrac{1}{1}-\dfrac{1}{2}\right) + \left(\dfrac{1}{2}-\dfrac{1}{3}\right) \\[5pt]
+s_3 & = \left(\dfrac{1}{1}-\dfrac{1}{2}\right) + \left(\dfrac{1}{2}-\dfrac{1}{3}\right) + \left(\dfrac{1}{3}-\dfrac{1}{4}\right) \\[5pt]
+s_4 & = \left(\dfrac{1}{1}-\dfrac{1}{2}\right) + \left(\dfrac{1}{2}-\dfrac{1}{3}\right)+ \left(\dfrac{1}{3}-\dfrac{1}{4}\right)+ \left(\dfrac{1}{4}-\dfrac{1}{5}\right) \\[5pt]
 $$
+
+But notice that for each of these partial sums, all of the fractions cancel except for the first and the last (this is why this type of series is sometimes referred to as a **telescoping series**). Simplifying we get:
+
+$$
+s_1 & = 1-\dfrac{1}{2} \\[5pt]
+s_2 & = 1-\dfrac{1}{3} \\[5pt]
+s_3 & = 1-\dfrac{1}{4} \\[5pt]
+s_4 & = 1-\dfrac{1}{5} \\[5pt]
+$$
+
+And from here we can identify what the general term $s_n$ would be:
+
+$$
+s_n = 1-\dfrac{1}{n+1}
+$$
+
 
 ```
 
-```{tabbed} Step 3
+```{tabbed} Limit
 
-Finally we write out the first four terms of our sequence:
+To determine the sum of the series, we then calculate the limit of our sequence of partial sums:
 
 $$
-\bigg\{ -4, 5, -6, 7 , \dots \bigg\}
+\lim_{n\to\infty}s_n = \lim_{n\to\infty} \left(1-\dfrac{1}{n+1}\right) = 1-0=1
+$$
+
+Since the sequence of partial sums converges to 1, we say the series converges and has sum equal to 1.
+
+$$
+\sum_{n=1}^{\infty} \dfrac{1}{n(n+1)} =1
 $$
 
 ```
@@ -243,7 +267,9 @@ $$
 ```
 
 
-
+```{warning}
+There are **no** rules like this for **multiplication and division.**
+```
 
 
 
@@ -266,39 +292,19 @@ $$
 
 ````{dropdown} Solution (Click to see the steps.)
 
-```{tabbed} Step 1
-We notice that the $n$-values start with $n=0$. To find the first four terms of the sequence, we will plug $n=0$, $n=1$, $n=2$, and $n=3$ into the formula of the general term:
+Applying the algebraic properties of convergent series, we can break our original series up:
 
 $$
-a_n=\dfrac{2^n}{n!}
+\sum_{n=1}^{\infty} \left(\dfrac{5}{3^n}-\dfrac{1}{2^n}\right) & = \sum_{n=1}^{\infty} \dfrac{5}{3^n}-\sum_{n=1}^{\infty} \dfrac{1}{2^n} \\[10pt]
+& = 5 \cdot \sum_{n=1}^{\infty} \dfrac{1}{3^n}-\sum_{n=1}^{\infty} \dfrac{1}{2^n} \\[10pt]
+& = 5 \cdot \tfrac{1}{2}-1 \\[10pt]
+& = \tfrac{3}{2}\\[10pt]
 $$
 
-```
+The reason why we're able to do these steps here is because we know that the series $\sum \tfrac{1}{3^n}$ and  $\sum \tfrac{1}{2^n}$  are both convergent. And then we also happen to know their sums, so we fill this in as our last step.
 
-```{tabbed} Step 2
-
-Let's calculate these:
-
-$$
-n=0 & \quad \longrightarrow \quad & \dfrac{2^0}{0!} = 1\\[10pt]
-n=1 & \quad \longrightarrow \quad & \dfrac{2^1}{1!} = 2\\[10pt]
-n=2 & \quad \longrightarrow \quad & \dfrac{2^2}{2!} = 2\\[10pt]
-n=3 & \quad \longrightarrow \quad & \dfrac{2^3}{3!} = \tfrac{4}{3}\\[10pt]
-$$
-
-```
-
-```{tabbed} Step 3
-
-Finally we write out the first four terms of our sequence:
-
-$$
-\bigg\{ 1, 2, 3, \tfrac{4}{3} , \dots \bigg\}
-$$
-
-```
 
 
 ````
 
--->
+
